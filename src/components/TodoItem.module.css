@@ -1,0 +1,86 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  animation: slideIn 0.18s ease;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid #cbd5e1;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, background 0.15s;
+  margin-top: 1px;
+  padding: 0;
+}
+
+.checkbox:hover {
+  border-color: #6366f1;
+}
+
+.item.done .checkbox {
+  background: #6366f1;
+  border-color: #6366f1;
+}
+
+.text {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #1e293b;
+  word-break: break-word;
+  padding-top: 1px;
+  transition: color 0.15s;
+}
+
+.item.done .text {
+  color: #94a3b8;
+  text-decoration: line-through;
+  text-decoration-color: #cbd5e1;
+}
+
+.delete {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+  margin-top: -2px;
+  padding: 0;
+}
+
+.delete:hover {
+  color: #ef4444;
+  background: #fef2f2;
+}
